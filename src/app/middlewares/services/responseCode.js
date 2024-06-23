@@ -1,6 +1,8 @@
 const codeEnum = {
-  200: "Suscess",
-  400: "Something went wrong",
+  0: 'Success',
+  997: 'Some validate field is error',
+  998: 'This item is empty',
+  999: 'Something went wrong',
 };
 
 exports.responseCode = (code, data, message) => {
