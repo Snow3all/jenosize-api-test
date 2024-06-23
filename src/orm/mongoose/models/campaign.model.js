@@ -13,4 +13,4 @@ const campaignSchema = new mongoose.Schema({
   createDate: { type: Date, default: Date.now },
 });
 
-module.exports = mongoose.model('Campaign', campaignSchema);
+module.exports = mongoose.model('Campaigns', campaignSchema);
