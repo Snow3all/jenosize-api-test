@@ -2,11 +2,10 @@ const Campaign = require("../../orm/mongoose/models/campaign.model");
 
 exports.getCampaign = async (parameter) => {
   let document = {};
-  if (!parameter) {
+  if (!parameter.id) {
     document = await Campaign.find().lean();
   } else {
     document = await Campaign.findOne({ _id: parameter.id })
-      .select("-id")
       .lean();
   }
   return document;
